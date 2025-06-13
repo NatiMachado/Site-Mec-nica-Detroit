@@ -1,3 +1,4 @@
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
@@ -12,75 +13,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Container padrão */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
-
-/* Header */
-.header-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #0a0a0a;
-  z-index: 1000;
-}
-
-.header-inner {
-  display: flex;
-  justify-content: space-between; /* Menu ao lado do logo */
-  align-items: center;
-  padding: 20px 0;
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 50px;
-}
-
-.logo-detroit {
-  width: 200px;
-  height: auto;
-}
-
-.logo-premium {
-  width: 100px;
-  height: auto;
-}
-
-/* Menu */
-.menu {
-  display: flex;
-  justify-content: flex-start; /* Alinhado ao lado direito da logo */
-}
-
-.menu ul {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-}
-
-.menu ul li a:link,
-.menu ul li a:visited,
-.menu ul li a:focus,
-.menu ul li a:active {
-  text-decoration: none !important;
-  color: white !important;
-  font-weight: bold !important;
-  transition: color 0.3s !important;
-}
-
-.menu ul li a:hover {
-  color: #ff0000 !important;
-}
-
 /* Hero */
 .hero {
   background: url("pins e logos/fachada.jpg") no-repeat center center/cover;
@@ -89,6 +21,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding: 20px;
 }
 
 .hero h2 {
@@ -115,22 +48,21 @@ body {
   background-color: #961515;
 }
 
+/* Scroll Imagens */
+.scroll-wrapper {
+  overflow: hidden;
+  width: 100%;
+  padding: 10px 0;
+}
+
 .scroll-container {
   display: flex;
   gap: 10px;
   animation: scroll 10s linear infinite;
 }
 
-.scroll-wrapper {
-  overflow: hidden;
-  width: 100%;
-  padding: 10px;
-}
-
 .scroll-container img {
-  flex: 0 0 auto;
   width: 150px;
-  height: auto;
   border-radius: 8px;
 }
 
@@ -143,153 +75,13 @@ body {
   }
 }
 
-/* Seções */
-.sobre,
-.servicos,
-.contato {
-  padding: 80px 0;
-}
-
-.sobre h2,
-.servicos h2,
-.contato h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 36px;
-}
-
-.sobre p,
-.contato p {
-  text-align: center;
-  max-width: 700px;
-  margin: auto;
-  margin-bottom: 20px;
-}
-
-/* Cards */
-.servicos .cards {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  padding-bottom: 10px;
-  scroll-snap-type: x mandatory;
-}
-
-.servicos .card {
-  background-color: #1a1a1a;
-  padding: 30px;
-  border-radius: 10px;
-  min-width: 280px;
-  flex: 0 0 auto;
-  scroll-snap-align: start;
-  transition: transform 0.3s;
-}
-
-.servicos .card:hover {
-  transform: scale(1.05);
-}
-
-.servicos .card h3 {
-  margin-bottom: 10px;
-  color: #ff0000;
-}
-
-/* Barra de rolagem estilizada */
-.servicos .cards::-webkit-scrollbar {
-  height: 8px;
-}
-
-.servicos .cards::-webkit-scrollbar-track {
-  background: #333;
-  border-radius: 10px;
-}
-
-.servicos .cards::-webkit-scrollbar-thumb {
-  background-color: #f20c0c;
-  border-radius: 10px;
-}
-
-.localizacao {
-  padding: 60px 0;
-  text-align: center;
-}
-
-.localizacao h2 {
-  font-size: 36px;
-  margin-bottom: 10px;
-}
-
-.localizacao p {
-  margin-bottom: 20px;
-}
-
-.mapa iframe {
-  width: 100%;
-  max-width: 1500px;
-  height: 600px;
-  border: none;
-  border-radius: 10px;
-}
-
-.Feedback {
-  padding: 80px 0;
-}
-
-.Feedback h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 36px;
-}
-
-.Feedback .cards {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  padding-bottom: 10px;
-  scroll-snap-type: x mandatory;
-}
-
-.Feedback .card {
-  background-color: #1a1a1a;
-  padding: 30px;
-  border-radius: 10px;
-  min-width: 280px;
-  flex: 0 0 auto;
-  scroll-snap-align: start;
-  transition: transform 0.3s;
-}
-
-.Feedback.card:hover {
-  transform: scale(1.05);
-}
-
-.Feedback.card h3 {
-  margin-bottom: 10px;
-  color: #ff0000;
-}
-
-/* Barra de rolagem estilizada */
-.Feedback.cards::-webkit-scrollbar {
-  height: 8px;
-}
-
-.Feedback .cards::-webkit-scrollbar-track {
-  background: #333;
-  border-radius: 10px;
-}
-
-.Feedback.cards::-webkit-scrollbar-thumb {
-  background-color: #f20c0c;
-  border-radius: 10px;
-}
-
-/* Estilo da seção de Mídias */
+/* Mídias */
 .midias {
   background-color: #000;
   padding: 50px 20px;
-  text-align: center;
   border-top: 3px solid #870b0b;
   border-bottom: 3px solid #791111;
+  text-align: center;
 }
 
 .midias h2 {
@@ -322,6 +114,162 @@ body {
   transform: scale(1.05);
 }
 
+/* Menu */
+.menu {
+  display: flex;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.menu ul li a:hover {
+  color: #ff0000;
+}
+
+/* Mapa */
+.mapa iframe {
+  width: 100%;
+  max-width: 1500px;
+  height: 600px;
+  border: none;
+  border-radius: 10px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.logo-detroit {
+  width: 200px;
+  height: auto;
+}
+
+.logo-premium {
+  width: 100px;
+  height: auto;
+}
+
+/* Cards com rolagem horizontal */
+.servicos .cards,
+.Feedback .cards {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 10px;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.servicos .card,
+.Feedback .card {
+  background-color: #1a1a1a;
+  padding: 30px;
+  border-radius: 10px;
+  min-width: 280px;
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  transition: transform 0.3s;
+}
+
+.servicos .card:hover,
+.Feedback .card:hover {
+  transform: scale(1.05);
+}
+
+.servicos .card h3,
+.Feedback .card h3 {
+  margin-bottom: 10px;
+  color: #ff0000;
+}
+
+/* Barra de rolagem estilizada */
+.servicos .cards::-webkit-scrollbar,
+.Feedback .cards::-webkit-scrollbar {
+  height: 8px;
+}
+
+.servicos .cards::-webkit-scrollbar-track,
+.Feedback .cards::-webkit-scrollbar-track {
+  background: #333;
+  border-radius: 10px;
+}
+
+.servicos .cards::-webkit-scrollbar-thumb,
+.Feedback .cards::-webkit-scrollbar-thumb {
+  background-color: #f20c0c;
+  border-radius: 10px;
+}
+
+/* Container padrão */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header */
+.header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0a0a0a;
+  z-index: 1000;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Seções */
+.sobre,
+.servicos,
+.contato,
+.localizacao,
+.Feedback,
+.midias {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.sobre h2,
+.servicos h2,
+.contato h2,
+.localizacao h2,
+.Feedback h2,
+.midias h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.sobre p,
+.contato p,
+.localizacao p {
+  max-width: 700px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
 /* Footer */
 footer {
   background-color: #121212;
@@ -331,7 +279,7 @@ footer {
   color: #777;
 }
 
-/* Responsivo */
+/* Responsivo: Mobile */
 @media (max-width: 768px) {
   .header-inner {
     flex-direction: column;
@@ -353,10 +301,24 @@ footer {
   }
 
   .logo-detroit {
-    width: 250px;
+    width: 180px;
   }
 
   .logo-premium {
-    width: 200px;
+    width: 80px;
+  }
+
+  .servicos .card,
+  .Feedback .card {
+    min-width: 220px;
+    padding: 20px;
+  }
+
+  .scroll-container img {
+    width: 100px;
+  }
+
+  .mapa iframe {
+    height: 300px;
   }
 }
